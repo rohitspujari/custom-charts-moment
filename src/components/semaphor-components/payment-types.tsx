@@ -158,6 +158,7 @@ export function PaymentTypes({ data, settings }: SingleInputVisualProps) {
             <div 
               key={`${merchant.merchant}-${index}`} 
               className="space-y-2 p-2 -mx-2 rounded-lg transition-all duration-200 hover:bg-gray-50 cursor-pointer active:bg-gray-100"
+              onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3 flex-1 min-w-0">

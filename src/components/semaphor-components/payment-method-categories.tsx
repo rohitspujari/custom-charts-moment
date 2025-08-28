@@ -116,7 +116,11 @@ export function PaymentMethodCategories({
         const isActive = percentage > 0;
 
         return (
-          <div key={method.name} className="flex items-center justify-between">
+          <div 
+            key={method.name} 
+            className="flex items-center justify-between p-2 -mx-2 rounded-lg transition-all duration-200 hover:bg-gray-50 cursor-pointer active:bg-gray-100"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex items-center gap-3 flex-1">
               <img
                 src={iconMap[method.name] || iconMap['Other']}
